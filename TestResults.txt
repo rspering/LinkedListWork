@@ -1,0 +1,7 @@
+Username (not for points): mwcxp5
+insert_throw_test.cpp: no compile on test
+my_exception_test.cpp: no compile on test
+occurences_test.cpp: no compile on test
+parent_variable_test.cpp: no compile on test
+polymorphic_function_calls_test.cpp: no compile on test
+Memory Leaks (0 is perfect): no compile on test
