@@ -1,4 +1,3 @@
-
 Programming assignment 5 (PA05)
 ==============================
 
