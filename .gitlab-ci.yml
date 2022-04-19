@@ -36,14 +36,14 @@ test:
     # Make directory for student files and clone into it as well as autotest files
     - mkdir autograder && cd autograder
     # Update autotest repo name here
-    - git clone http://${GRADER_USERNAME}:${GRADER_ACCESS_TOKEN}@${CI_SERVER_HOST}/2022-SP-CS1575/pa02-ci-autotest .
+    - git clone http://${GRADER_USERNAME}:${GRADER_ACCESS_TOKEN}@${CI_SERVER_HOST}/2022-SP-CS1575/pa05-ci-autotest .
     - mkdir hw
     - cd hw
     - mkdir $GITLAB_USER_LOGIN
     - cd $GITLAB_USER_LOGIN
     - git clone -b "${CI_COMMIT_BRANCH}" http://${GRADER_USERNAME}:${GRADER_ACCESS_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git .
     - cd ../..
-    - python3 autograder_pa02.py hw
+    - python3 autograder_pa05.py hw
     - cd hw/$GITLAB_USER_LOGIN
     - mv ../../processResults.py ./
     - python3 processResults.py
