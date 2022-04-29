@@ -7,7 +7,7 @@
 # Docker image enviroment 
 image: ubuntu:latest
 
-# Only one stage to test and push results
+# Only one stage to test and push  results
 stages:
     - test
 
@@ -36,12 +36,12 @@ test:
     # Make directory for student files and clone into it as well as autotest files
     - mkdir autograder && cd autograder
     # Update autotest repo name here
-    - git clone http://${GRADER_USERNAME}:${GRADER_ACCESS_TOKEN}@${CI_SERVER_HOST}/2022-SP-CS1575/pa05-ci-autotest .
+    - git clone https://oauth2:${GRADER_ACCESS_TOKEN}@git-classes.mst.edu/2022-SP-CS1575/pa05-ci-autotest .
     - mkdir hw
     - cd hw
     - mkdir $GITLAB_USER_LOGIN
     - cd $GITLAB_USER_LOGIN
-    - git clone -b "${CI_COMMIT_BRANCH}" http://${GRADER_USERNAME}:${GRADER_ACCESS_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git .
+    - git clone -b "${CI_COMMIT_BRANCH}" https://oauth2:${GRADER_ACCESS_TOKEN}@git-classes.mst.edu/${CI_PROJECT_PATH}.git .
     - cd ../..
     - python3 autograder_pa05.py hw
     - cd hw/$GITLAB_USER_LOGIN
@@ -56,7 +56,7 @@ test:
     - git commit --allow-empty -m "Tested"
     # Set up enviroment variables here in settings > CI/CD > variables: Needed for pushing to student repo
     # NOTE: only pushes to student repo if he/she started the job (commit/push) also skips the pipeline
-    - git push "http://${GRADER_USERNAME}:${GRADER_ACCESS_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git"
+    - git push "https://oauth2:${GRADER_ACCESS_TOKEN}@git-classes.mst.edu/${CI_PROJECT_PATH}.git"
    
   artifacts:
     paths:
