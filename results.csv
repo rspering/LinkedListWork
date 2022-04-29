@@ -1,22 +1,2 @@
 Username (not for points),Assign_test.cpp,Back_test.cpp,Clear_test.cpp,CopyConstructor_test.cpp,Empty_test.cpp,Erase_test.cpp,Front_test.cpp,Insert_test.cpp,OpEqual_test.cpp,PopBack_test.cpp,PopFront_test.cpp,PushBack_test.cpp,PushFront_test.cpp,Remove_test.cpp,Reverse_test.cpp,Size_test.cpp,"Username accurate (0 good, 1 bad)",Bytes definitely lost (memory leak) (0 is perfect)
-rjstrd,pass,pass,pass,pass,pass,pass,pass,pass,"In file included from hw/rjstrd/MyList.h:112,
-                 from unit_tests/OpEqual_test.cpp:3:
-hw/rjstrd/MyList.hpp: In instantiation of ‘MyList<T>& MyList<T>::operator=(const MyList<T>&) [with T = int]’:
-unit_tests/OpEqual_test.cpp:15:17:   required from here
-hw/rjstrd/MyList.hpp:47:17: error: passing ‘const MyList<int>’ as ‘this’ argument discards qualifiers [-fpermissive]
-   47 |   if(source.size() == 0)
-      |      ~~~~~~~~~~~^~
-hw/rjstrd/MyList.hpp:271:5: note:   in call to ‘int MyList<T>::size() [with T = int]’
-  271 | int MyList<T>::size()
-      |     ^~~~~~~~~
-",pass,pass,pass,pass,pass,pass,pass,0,"In file included from hw/rjstrd/MyList.h:112,
-                 from mem_test/mem_test.cpp:2:
-hw/rjstrd/MyList.hpp: In instantiation of ‘MyList<T>& MyList<T>::operator=(const MyList<T>&) [with T = int]’:
-mem_test/mem_test.cpp:13:17:   required from here
-hw/rjstrd/MyList.hpp:47:17: error: passing ‘const MyList<int>’ as ‘this’ argument discards qualifiers [-fpermissive]
-   47 |   if(source.size() == 0)
-      |      ~~~~~~~~~~~^~
-hw/rjstrd/MyList.hpp:271:5: note:   in call to ‘int MyList<T>::size() [with T = int]’
-  271 | int MyList<T>::size()
-      |     ^~~~~~~~~
-"
+rjstrd,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,pass,0,0
