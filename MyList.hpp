@@ -44,7 +44,7 @@ MyList<T>::MyList(const MyList<T> &source)
 template <typename T>
 MyList<T> & MyList<T>::operator=(const MyList<T> &source)
 {
-  if(source.size() == 0)
+  if(source.m_size == 0)
   {
     return *this;
   }
@@ -56,7 +56,7 @@ MyList<T> & MyList<T>::operator=(const MyList<T> &source)
     push_back(curr->m_element);
     curr = curr->m_next;
   }
-  
+
   return *this;
 }
 
