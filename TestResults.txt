@@ -1,0 +1,39 @@
+Username (not for points): rjstrd
+Assign_test.cpp: pass
+Back_test.cpp: pass
+Clear_test.cpp: pass
+CopyConstructor_test.cpp: In file included from hw/rjstrd/MyList.h:112,
+                 from unit_tests/CopyConstructor_test.cpp:3:
+hw/rjstrd/MyList.hpp: In instantiation of ‘MyList<T>::MyList(const MyList<T>&) [with T = int]’:
+unit_tests/CopyConstructor_test.cpp:13:40:   required from here
+hw/rjstrd/MyList.hpp:33:17: error: passing ‘const MyList<int>’ as ‘this’ argument discards qualifiers [-fpermissive]
+   33 |   if(source.size() > 0)
+      |      ~~~~~~~~~~~^~
+hw/rjstrd/MyList.hpp:268:5: note:   in call to ‘int MyList<T>::size() [with T = int]’
+  268 | int MyList<T>::size()
+      |     ^~~~~~~~~
+
+Empty_test.cpp: pass
+Erase_test.cpp: pass
+Front_test.cpp: pass
+Insert_test.cpp: pass
+OpEqual_test.cpp: Probably crashed
+PopBack_test.cpp: pass
+PopFront_test.cpp: pass
+PushBack_test.cpp: pass
+PushFront_test.cpp: pass
+Remove_test.cpp: pass
+Reverse_test.cpp: pass
+Size_test.cpp: pass
+Username accurate (0 good, 1 bad): 0
+Bytes definitely lost (memory leak) (0 is perfect): In file included from hw/rjstrd/MyList.h:112,
+                 from mem_test/mem_test.cpp:2:
+hw/rjstrd/MyList.hpp: In instantiation of ‘MyList<T>::MyList(const MyList<T>&) [with T = int]’:
+mem_test/mem_test.cpp:15:36:   required from here
+hw/rjstrd/MyList.hpp:33:17: error: passing ‘const MyList<int>’ as ‘this’ argument discards qualifiers [-fpermissive]
+   33 |   if(source.size() > 0)
+      |      ~~~~~~~~~~~^~
+hw/rjstrd/MyList.hpp:268:5: note:   in call to ‘int MyList<T>::size() [with T = int]’
+  268 | int MyList<T>::size()
+      |     ^~~~~~~~~
+
