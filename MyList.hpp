@@ -30,7 +30,7 @@ MyList<T>::MyList(const MyList<T> &source)
   m_size = 0;
   m_sentinel = new Node<T>(nullptr, nullptr);
 
-  if(source.size() > 0)
+  if(source.m_size > 0)
   {
     Node<T> *curr = source.m_sentinel->m_next;
     while(curr != nullptr)
@@ -44,16 +44,19 @@ MyList<T>::MyList(const MyList<T> &source)
 template <typename T>
 MyList<T> & MyList<T>::operator=(const MyList<T> &source)
 {
-  if(size() == 0)
+  if(source.size() == 0)
   {
     return *this;
   }
+
   Node<T> *curr = source.m_sentinel->m_next;
+ 
   while(curr != nullptr)
   {
     push_back(curr->m_element);
     curr = curr->m_next;
   }
+  
   return *this;
 }
 
